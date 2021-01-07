@@ -32,6 +32,18 @@
                     color="#000000"
                     description="default behavior(-)comp.antena(-)economyMode"
                     class-name-settings-controller ="DroneSettingsPanelController"/>
+    
+     <WrapperElement name-file-aj="Wrapper5"
+                    id="8" name-shown-panel="Wrapper5"
+                    color="#008000"
+                    description="Find the nereast charge station and charge"
+                    class-name-settings-controller ="DroneSettingsPanelController"/>
+
+    <WrapperElement name-file-aj="Wrapper6"
+                    id="8" name-shown-panel="Wrapper6"
+                    color="#008000"
+                    description="Avoiding Mountain"
+                    class-name-settings-controller ="DroneSettingsPanelController"/>
 
     <!--Boat Wrappers-->
     <WrapperElement name-file-aj="NoneBoatWrapper"
