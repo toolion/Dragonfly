@@ -595,6 +595,20 @@ public class Drone extends Entity {
 
         return false;
     }
+    
+        public boolean AvoidMountain(){
+
+        if(onTopOfList.isEmpty()){
+            return false;
+        }
+        for(Object object :onTopOfList){
+            if(object instanceof TreeView){
+                return true;
+            }
+        }
+
+        return false;
+    }
 
     public Boolean isLost() {
         return isLost;
