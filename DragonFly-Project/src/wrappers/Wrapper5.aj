@@ -53,7 +53,7 @@ public aspect Wrapper5 {
         //TODO implement A* to find the charge station and charge
 
 
-        AStarAlgorithm
+       // AStarAlgorithm
 
 
     }
