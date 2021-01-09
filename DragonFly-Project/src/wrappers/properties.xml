@@ -33,6 +33,13 @@
                     description="default behavior(-)comp.antena(-)economyMode"
                     class-name-settings-controller ="DroneSettingsPanelController"/>
 
+    <WrapperElement name-file-aj="Charge"
+                    id="8" name-shown-panel="find charge station"
+                    color="#000000"
+                    description="Find charge station"
+                    class-name-settings-controller ="DroneSettingsPanelController"/>
+
+
     <!--Boat Wrappers-->
     <WrapperElement name-file-aj="NoneBoatWrapper"
                     id="5"

@@ -7,6 +7,7 @@ import view.SelectableView;
 
 public abstract class HospitalView  extends Group implements SelectableView, Hospital.Listener {
     protected String uniqueID = null;
+
   /*  public static List<HospitalView> hospitalViewList = new ArrayList<>();
     public Object getHospital() {
         return null;

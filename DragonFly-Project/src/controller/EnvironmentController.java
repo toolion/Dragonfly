@@ -14,6 +14,7 @@ import view.CellView;
 import view.SelectableView;
 import view.drone.DroneView;
 import view.EnvironmentView;
+import view.hospital.HospitalView;
 import view.river.RiverView;
 
 import java.util.*;
