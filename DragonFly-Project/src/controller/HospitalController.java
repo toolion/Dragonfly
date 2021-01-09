@@ -2,12 +2,16 @@ package controller;
 
 import javafx.scene.input.KeyEvent;
 import model.entity.Hospital;
+import model.entity.drone.Drone;
 import view.CellView;
 import view.SelectableView;
+import view.drone.DroneView;
 import view.hospital.HospitalView;
 import view.hospital.HospitalViewImpl;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class HospitalController {
@@ -116,4 +120,32 @@ public class HospitalController {
         HospitalView hospitalView = hospitalViewMap.remove(hospital.getUniqueID());
         hospitalView.getCurrentCellView().getChildren().remove(hospitalView);
     }
+
+    public List<HospitalView> getHospitalViewList(){
+        return new ArrayList<>(hospitalViewMap.values());
+    }
+
+    public HospitalView getCloserHospital(Drone drone) {
+        DroneView droneView = DroneController.getInstance().getDroneViewFrom(drone.getUniqueID());
+        List<HospitalView> hospitalViewList = getHospitalViewList();
+        Double closerDistance = 9999999D;
+        HospitalView closerHospitalView = null;
+        for(HospitalView hospitalView : hospitalViewList){
+            double newDistance = CellController.getInstance().calculeteDisplacementFrom(droneView, hospitalView);
+
+            if(newDistance < closerDistance){
+                closerDistance = newDistance;
+                closerHospitalView = hospitalView;
+            }
+        }
+        return closerHospitalView;
+
+    }
+
+
+
+
+
+
+
 }

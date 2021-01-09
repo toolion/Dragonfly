@@ -97,5 +97,11 @@
                     description="EmergencyCamera-experiment"
                     class-name-settings-controller ="DroneSettingsPanelController"/>
 
+    <WrapperElement name-file-aj="Charge"
+                    id="16" name-shown-panel="find charge station"
+                    color="#000000"
+                    description="Find charge station"
+                    class-name-settings-controller ="DroneSettingsPanelController"/>
+
 
 </WrapperElements>
