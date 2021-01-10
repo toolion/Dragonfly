@@ -77,7 +77,7 @@ public class EnvironmentController {
         if( selectedEntityView != null){
             RiverController.getInstance().consumeClickEvent(selectedEntityView);
             AntennaController.getInstance().consumeClickEvent(selectedEntityView);
-            HospitalController.getInstance().consumeClickEvent(selectedEntityView);
+            ChargeStationController.getInstance().consumeClickEvent(selectedEntityView);
             DroneController.getInstance().consumeClickEvent(selectedEntityView);
             BoatAutomaticController.getInstance().consumeClickEvent(selectedEntityView);
             HouseController.getInstance().consumeClickEvent(selectedEntityView);
@@ -106,7 +106,7 @@ public class EnvironmentController {
         if (selectedCellView != null) {
             RiverController.getInstance().consumeOnKeyPressed(selectedEntityView, keyEvent);
             AntennaController.getInstance().consumeOnKeyPressed(selectedEntityView, keyEvent);
-            HospitalController.getInstance().consumeOnKeyPressed(selectedEntityView, keyEvent);
+            ChargeStationController.getInstance().consumeOnKeyPressed(selectedEntityView, keyEvent);
             DroneController.getInstance().consumeOnKeyPressed(selectedEntityView, keyEvent);
             BoatAutomaticController.getInstance().consumeOnKeyPressed(selectedEntityView,keyEvent);
             HouseController.getInstance().consumeOnKeyPressed(selectedEntityView,keyEvent);
@@ -171,7 +171,7 @@ public class EnvironmentController {
         environmentView.notifyclearEnverionment();
 
         DroneController.getInstance().consumeCleanEnvironment();
-        HospitalController.getInstance().consumeCleanEnvironment();
+        ChargeStationController.getInstance().consumeCleanEnvironment();
         SoSPointController.getInstance().consumeClearEnvironment();
         AntennaController.getInstance().consumeClearEnvironment();
         BoatAutomaticController.getInstance().consumeCleanEnvironment();
@@ -184,7 +184,7 @@ public class EnvironmentController {
     public void consumeRunEnviroment() {
         RiverController.getInstance().consumeRunEnviroment();
         AntennaController.getInstance().consumeRunEnviroment();
-        HospitalController.getInstance().consumeRunEnviroment();
+        ChargeStationController.getInstance().consumeRunEnviroment();
         DroneController.getInstance().consumeRunEnviroment();
         BoatAutomaticController.getInstance().consumeRunEnviroment();
         CellController.getInstance().consumeRunEnviroment();
@@ -201,7 +201,7 @@ public class EnvironmentController {
 
         RiverController.getInstance().consumeReset();
         AntennaController.getInstance().consumeReset();
-        HospitalController.getInstance().consumeReset();
+        ChargeStationController.getInstance().consumeReset();
         DroneController.getInstance().consumeReset();
         CellController.getInstance().consumeReset();
         BoatAutomaticController.getInstance().consumeReset();
@@ -258,7 +258,7 @@ public class EnvironmentController {
     }
 
 
-    public Hospital createHospital(CellView selectedCellView) throws ClickOutsideRegionException {
+    public ChargeStation createHospital(CellView selectedCellView) throws ClickOutsideRegionException {
 
         String uniqueID = UniqueIDGenenator.generate();
 
@@ -266,10 +266,10 @@ public class EnvironmentController {
 
     }
 
-    public Hospital createHospital( String uniqueID , CellView selectedCellView) throws ClickOutsideRegionException {
+    public ChargeStation createHospital(String uniqueID , CellView selectedCellView) throws ClickOutsideRegionException {
         clearSelectionOnAllSelectableView();
 
-        HospitalController hospitalController = HospitalController.getInstance();
+        ChargeStationController chargeStationController = ChargeStationController.getInstance();
 
 
         if (selectedCellView == null) {
@@ -279,13 +279,13 @@ public class EnvironmentController {
 
 
 
-        String hospitalLabel = String.valueOf(Hospital.COUNT_HOSPITAL);
+        String hospitalLabel = String.valueOf(ChargeStation.COUNT_HOSPITAL);
 
-        Hospital hospital = hospitalController.createHospital(uniqueID, hospitalLabel, selectedCellView);
+        ChargeStation chargeStation = chargeStationController.createHospital(uniqueID, hospitalLabel, selectedCellView);
 
         this.selectedEntityView = CellController.getInstance().getSelectedEntityView(selectedCellView);
 
-        return hospital;
+        return chargeStation;
 
 
     }
@@ -479,7 +479,7 @@ public class EnvironmentController {
         DroneController.getInstance().cleanSelections();
         AntennaController.getInstance().cleanSelections();
         RiverController.getInstance().cleanSelections();
-        HospitalController.getInstance().cleanSelections();
+        ChargeStationController.getInstance().cleanSelections();
         CellController.getInstance().cleanSelections();
         BoatAutomaticController.getInstance().cleanSelections();
         HouseController.getInstance().cleanSelections();

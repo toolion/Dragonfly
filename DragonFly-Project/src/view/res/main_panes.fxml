@@ -26,7 +26,7 @@
              <ToggleButton fx:id="riverToggleButton" focusTraversable="false" layoutX="2.0" layoutY="5.0" selected="false" text="River">
 
             </ToggleButton>
-            <ToggleButton fx:id="hospitalToggleButton" focusTraversable="false" layoutX="56.0" layoutY="5.0" prefHeight="26.0" prefWidth="76.0" text="Hospital">
+            <ToggleButton fx:id="hospitalToggleButton" focusTraversable="false" layoutX="56.0" layoutY="5.0" prefHeight="26.0" prefWidth="76.0" text="ChargeStation">
 
             </ToggleButton>
             <ToggleButton fx:id="droneToggleButton" focusTraversable="false" layoutX="209.0" layoutY="5.0" text="Drone">
@@ -35,7 +35,7 @@
             <Label fx:id="strongWindLabel" layoutX="4.0" layoutY="161.0" text="Wind:" />
             <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="76.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@hospital.png" />
+                  <Image url="@ChargingStation.PNG" />
                </image>
             </ImageView>
             <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="220.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">

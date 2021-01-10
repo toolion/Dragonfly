@@ -2,9 +2,7 @@ package controller;
 
 import javafx.scene.Node;
 import javafx.scene.input.KeyEvent;
-import model.entity.Hospital;
 import model.entity.SoSPoint;
-import model.entity.Tree;
 import view.CellView;
 import view.SelectableView;
 import view.sosPoint.SoSPointView;

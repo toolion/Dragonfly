@@ -1,4 +1,4 @@
-package view.hospital;
+package view.chargeStation;
 
 import javafx.scene.Node;
 import javafx.scene.control.Label;
@@ -6,11 +6,11 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
 import javafx.scene.text.TextAlignment;
-import model.entity.Hospital;
+import model.entity.ChargeStation;
 import util.SelectHelper;
 import view.CellView;
 
-public class HospitalViewImpl extends HospitalView {
+public class ChargeStationViewImpl extends ChargeStationView {
     public static double width = 64;
     public static double height = 64;
     private final String hospitalLabel;
@@ -19,7 +19,7 @@ public class HospitalViewImpl extends HospitalView {
     private SelectHelper selectHelper = new SelectHelper(SelectHelper.DEFAULT_COLOR);
 
 
-    public HospitalViewImpl(String uniqueID, String hospitalLabel, CellView cellViewSelected) {
+    public ChargeStationViewImpl(String uniqueID, String hospitalLabel, CellView cellViewSelected) {
         this.hospitalLabel = hospitalLabel;
         this.uniqueID = uniqueID;
         this.currentCellView = cellViewSelected;
@@ -30,7 +30,7 @@ public class HospitalViewImpl extends HospitalView {
         label.setTextAlignment(TextAlignment.CENTER);
 
         ImageView imageView = new ImageView();
-        Image image = new Image("/view/res/hospital.png");
+        Image image = new Image("/view/res/ChargingStation.png");
         imageView.setImage(image);
 
         this.getChildren().addAll(imageView, label);
@@ -42,7 +42,7 @@ public class HospitalViewImpl extends HospitalView {
 
 //    @Override
 //    public Object getHospital() {
-//        return hospital;
+//        return chargeStation;
 //    }
 
     @Override
@@ -77,8 +77,8 @@ public class HospitalViewImpl extends HospitalView {
     }
 
     @Override
-    public void onChange(Hospital hospital, String methodName, Object oldValue, Object newValue) {
-        if(uniqueID != hospital.getUniqueID()){
+    public void onChange(ChargeStation chargeStation, String methodName, Object oldValue, Object newValue) {
+        if(uniqueID != chargeStation.getUniqueID()){
             return;
         }
 
@@ -97,34 +97,34 @@ public class HospitalViewImpl extends HospitalView {
 
 
 //    public static void cleanHospitalViewList() {
-//        for(HospitalView hospitalView : new ArrayList<>(hospitalViewList)){
+//        for(ChargeStationView hospitalView : new ArrayList<>(hospitalViewList)){
 //            removeHospitalViewFromList(hospitalView);
 //        }
 //    }
 //
 //
-//    public static List<HospitalView> getHospitalViewList() {
+//    public static List<ChargeStationView> getHospitalViewList() {
 //        return hospitalViewList;
 //    }
 //
 //
-//    public static void removeHospitalViewFromList(HospitalView hospitalView) {
+//    public static void removeHospitalViewFromList(ChargeStationView hospitalView) {
 //        if(hospitalViewList.contains(hospitalView)){
 //            hospitalViewList.remove(hospitalView);
 //        }
 //
 //       /* for(DroneView droneView : new ArrayList<>(DroneViewImpl.droneViewList)){
-//            if(((Drone)droneView.getDrone()).getDestinyHopistal()==(Hospital) hospitalView.getHospital()){
+//            if(((Drone)droneView.getDrone()).getDestinyHopistal()==(ChargeStation) hospitalView.getHospital()){
 //                DroneViewImpl.removeDroneViewFromList(droneView);
 //            }
-//            if(((Drone)droneView.getDrone()).getSourceHospital()==(Hospital) hospitalView.getHospital()){
+//            if(((Drone)droneView.getDrone()).getSourceHospital()==(ChargeStation) hospitalView.getHospital()){
 //                DroneViewImpl.removeDroneViewFromList(droneView);
 //            }
 //        }*/
 //    }
 //
 //
-//    public static void addHospitalViewFromList(HospitalView hospitalView) {
+//    public static void addHospitalViewFromList(ChargeStationView hospitalView) {
 //        if(!hospitalViewList.contains(hospitalView)){
 //            hospitalViewList.add(hospitalView);
 //        }

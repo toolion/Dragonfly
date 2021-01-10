@@ -385,6 +385,25 @@ public class DroneBusinessObject {
         selectedDrone.setCurrentPositionI(newI);
     }
 
+    public static void stay(Drone selectedDrone) {
+
+        EnvironmentController environmentController = EnvironmentController.getInstance();
+
+        int newI = selectedDrone.getCurrentPositionI();
+        int newJ = selectedDrone.getCurrentPositionJ();
+        newI = newI;
+        int minIInEnverionment = 0;
+        int maxIInEnverionment = environmentController.getCountRow() - 1;
+
+        if (newI > maxIInEnverionment || newI < minIInEnverionment) {
+
+            return;
+        }
+
+
+        selectedDrone.setCurrentPositionI(newI);
+    }
+
     public static void flyingUp(Drone selectedDrone) {
 
         EnvironmentController environmentController = EnvironmentController.getInstance();
@@ -793,11 +812,11 @@ public class DroneBusinessObject {
 
         CellView droneCellView = DroneController.getInstance().getDroneViewFrom(drone.getUniqueID()).getCurrentCellView();
         if(drone.isReturningToHome()){
-            //go to source hospital (return to home)
+            //go to source chargeStation (return to home)
             hopitalCellView = CellController.getInstance().getCellViewFrom(drone.getSourceCell());
 
         }else {
-            //go to destiny hospital (to go destiny)
+            //go to destiny chargeStation (to go destiny)
             hopitalCellView = CellController.getInstance().getCellViewFrom(drone.getDestinyCell());
         }
 
@@ -959,6 +978,11 @@ public class DroneBusinessObject {
     public static DirectionEnum closeDirection(CellView srcCellView, CellView dstCellView) {
         double newDistanceSource = 999999;
         DirectionEnum mustGO = null;
+
+        //if ( srcCellView == dstCellView) {
+        //    mustGO = DirectionEnum.STAY;
+        //}
+
 
         double tempDistance = distanceDroneWentRight(srcCellView, dstCellView);
 
@@ -1146,6 +1170,12 @@ public class DroneBusinessObject {
                 case SOUTH:
                     flyingDown(drone);
                     break;
+
+                //case STAY:
+                //    flyingDown(drone);
+                    //stay(drone);
+                //    break;
+
             }
 
         }

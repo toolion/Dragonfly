@@ -327,11 +327,11 @@ public class DroneAutomaticController extends DroneController {
 //
 //        CellView droneCellView = DroneController.getInstance().getDroneViewFrom(drone.getUniqueID()).getCurrentCellView();
 //        if(drone.isReturningToHome()){
-//            //go to source hospital (return to home)
+//            //go to source chargeStation (return to home)
 //             hopitalCellView = CellController.getInstance().getCellViewFrom(drone.getSourceCell());
 //
 //        }else {
-//            //go to destiny hospital (to go destiny)
+//            //go to destiny chargeStation (to go destiny)
 //            hopitalCellView = CellController.getInstance().getCellViewFrom(drone.getDestinyCell());
 //        }
 //

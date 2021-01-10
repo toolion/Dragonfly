@@ -240,7 +240,7 @@ public aspect Wrapper4 {
                         BoatAutomaticController.getInstance().goDestinyAutomatic(boatView, droneView.getCurrentCellView());
 
                     }else {
-                        //boat go hospital
+                        //boat go chargeStation
 
                         RiverView newCloserRiverView = getCloserRiverView(drone, destinyCellView);
 

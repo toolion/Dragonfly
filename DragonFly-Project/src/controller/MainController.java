@@ -2,7 +2,6 @@ package controller;
 
 import controller.settings_panel.BoatSettingsPanelController;
 import controller.settings_panel.DroneSettingsPanelController;
-import controller.settings_panel.SettingsPanelController;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -22,7 +21,7 @@ import view.SelectableView;
 import view.antenna.AntennaView;
 import view.boat.BoatView;
 import view.drone.DroneView;
-import view.hospital.HospitalView;
+import view.chargeStation.ChargeStationView;
 import view.house.HouseView;
 import view.river.RiverView;
 import view.sosPoint.SoSPointView;
@@ -329,9 +328,9 @@ public class MainController extends Application {
                     AntennaController.getInstance().deleteAntenna(antenna);
 
                 }
-                else if( selectableView instanceof HospitalView){
-                    Hospital hospital = HospitalController.getInstance().getHospitalFrom(selectableView.getUniqueID());
-                    HospitalController.getInstance().deleteHospital(hospital);
+                else if( selectableView instanceof ChargeStationView){
+                    ChargeStation chargeStation = ChargeStationController.getInstance().getHospitalFrom(selectableView.getUniqueID());
+                    ChargeStationController.getInstance().deleteHospital(chargeStation);
 
                 }
                 else if( selectableView instanceof HouseView){

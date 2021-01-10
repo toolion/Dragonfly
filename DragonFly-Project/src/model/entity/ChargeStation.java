@@ -3,7 +3,7 @@ package model.entity;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Hospital extends Entity{
+public class ChargeStation extends Entity{
     private final String uniqueID;
     int rowPosition, columnPosition;
     public static  int COUNT_HOSPITAL = 1;
@@ -11,7 +11,7 @@ public class Hospital extends Entity{
     private List<Listener> listeners = new ArrayList<>();
     private String label;
 
-    public Hospital(String uniqueID, String label, int rowPosition, int columnPosition) {
+    public ChargeStation(String uniqueID, String label, int rowPosition, int columnPosition) {
         this.uniqueID = uniqueID;
         this.rowPosition = rowPosition;
         this.columnPosition = columnPosition;
@@ -24,7 +24,7 @@ public class Hospital extends Entity{
     }
 
     public interface Listener{
-        public void onChange(Hospital hospital, String methodName, Object oldValue, Object newValue);
+        public void onChange(ChargeStation chargeStation, String methodName, Object oldValue, Object newValue);
     }
 
     public static void restartCount() {

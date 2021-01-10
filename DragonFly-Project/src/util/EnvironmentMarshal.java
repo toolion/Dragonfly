@@ -56,14 +56,14 @@ abstract public class EnvironmentMarshal {
         Element hospitalElements = document.createElement(ConstantXml.ROOT_HOSPITAL_ELEMENT);
         environmentElements.appendChild(hospitalElements);
 
-        for(Hospital hospital : HospitalController.getInstance().getHospitalMap().values()){
+        for(ChargeStation chargeStation : ChargeStationController.getInstance().getHospitalMap().values()){
 
             Element hospitalElement = document.createElement(ConstantXml.HOSPITAL_ELEMENT);
 
-            hospitalElement.setAttribute(ConstantXml.UNIQUE_ID_ATTRIBUTE,hospital.getUniqueID());
-            hospitalElement.setAttribute(ConstantXml.LABEL_ATTRIBUTE, hospital.getLabel());
-            hospitalElement.setAttribute(ConstantXml.SOURCE_COLUMN_POSITION_ATTRIBUTE, String.valueOf(hospital.getColumnPosition()));
-            hospitalElement.setAttribute(ConstantXml.SOURCE_ROW_POSITION_ATTRIBUTE, String.valueOf(hospital.getRowPosition()));
+            hospitalElement.setAttribute(ConstantXml.UNIQUE_ID_ATTRIBUTE, chargeStation.getUniqueID());
+            hospitalElement.setAttribute(ConstantXml.LABEL_ATTRIBUTE, chargeStation.getLabel());
+            hospitalElement.setAttribute(ConstantXml.SOURCE_COLUMN_POSITION_ATTRIBUTE, String.valueOf(chargeStation.getColumnPosition()));
+            hospitalElement.setAttribute(ConstantXml.SOURCE_ROW_POSITION_ATTRIBUTE, String.valueOf(chargeStation.getRowPosition()));
 
             hospitalElements.appendChild(hospitalElement);
 
@@ -260,7 +260,7 @@ abstract public class EnvironmentMarshal {
             CellView cellView = cellController.getCellViewFrom(rowPosition,columnPosition);
 
 
-            HospitalController.getInstance().createHospital(uniqueID, label, cellView);
+            ChargeStationController.getInstance().createHospital(uniqueID, label, cellView);
         }
 
         //HOUSE

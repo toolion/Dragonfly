@@ -1,13 +1,13 @@
-package view.hospital;
+package view.chargeStation;
 
 import javafx.scene.Group;
 import javafx.scene.Node;
-import model.entity.Hospital;
+import model.entity.ChargeStation;
 import view.SelectableView;
 
-public abstract class HospitalView  extends Group implements SelectableView, Hospital.Listener {
+public abstract class ChargeStationView extends Group implements SelectableView, ChargeStation.Listener {
     protected String uniqueID = null;
-  /*  public static List<HospitalView> hospitalViewList = new ArrayList<>();
+  /*  public static List<ChargeStationView> hospitalViewList = new ArrayList<>();
     public Object getHospital() {
         return null;
     }*/
@@ -24,15 +24,15 @@ public abstract class HospitalView  extends Group implements SelectableView, Hos
 /*
     public static void cleanHospitalViewList() {}
 
-    public static List<HospitalView> getHospitalViewList() {
+    public static List<ChargeStationView> getHospitalViewList() {
         return hospitalViewList;
     }
 
-    public static void removeHospitalViewFromList(HospitalView hospitalView) {
+    public static void removeHospitalViewFromList(ChargeStationView hospitalView) {
 
     }
 
-    public static void addHospitalViewFromList(HospitalView hospitalView){
+    public static void addHospitalViewFromList(ChargeStationView hospitalView){
 
     }*/
 

@@ -1,7 +1,7 @@
 # Dragonfly
 
 #### SEAMS 2019 artifact
-Dragonfly simulates the self-adaptive drone's behaviour with and without a wrapper solution during its flight from a source to a target hospital.  
+Dragonfly simulates the self-adaptive drone's behaviour with and without a wrapper solution during its flight from a source to a target chargeStation.  
 
 ## Summary
 This repository contains all resources from Dragonfly, submitted to Artifacts track at SEAMS 2019. It consists of an executable simulator for self-adaptive drones, its source code and a demonstration video. This text provides instructions on how to use the simulator.
